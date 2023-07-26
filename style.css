@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+h2{
+    font-size: 200px;
+    color: transparent;
+}
+
+h2 span{
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes animate {
+    0%{
+        color: white;
+        filter: blur(1px) hue-rotate(0deg);
+        text-shadow: 0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 120px cyan,
+        0 0 200px cyan,
+        0 0 300px cyan;
+    }
+    30%,70%{
+        color: white;
+        filter: blur(1px) hue-rotate(360deg);
+        text-shadow: 0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 120px cyan,
+        0 0 200px cyan,
+    }
+    100%{
+        color: transparent;
+        box-shadow: none;
+        filter: blur(1px) hue-rotate(0deg);
+    }
+}
